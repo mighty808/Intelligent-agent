@@ -1,0 +1,40 @@
+
+--- LAB 4 MESSAGE LOG START ---
+[2026-02-21 22:20:29 UTC] COORDINATOR -> SENT REQUEST to paakwesi8@xmpp.jp | body='TASK: Respond to FLOOD at Zone-A; severity=HIGH'
+[2026-02-21 22:20:45 UTC] RescueAgent started (Lab 4).
+[2026-02-21 22:21:29 UTC] COORDINATOR stopped.
+[2026-02-21 22:21:45 UTC] RESCUE stopped.
+[2026-02-21 22:22:26 UTC] RescueAgent started (Lab 4).
+
+--- LAB 4 MESSAGE LOG START ---
+[2026-02-21 22:22:29 UTC] COORDINATOR -> SENT REQUEST to groupworklab4@xmpp.jp | body='TASK: Respond to FLOOD at Zone-A; severity=HIGH'
+[2026-02-21 22:23:26 UTC] RESCUE stopped.
+[2026-02-21 22:23:29 UTC] COORDINATOR stopped.
+[2026-02-21 22:25:57 UTC] RescueAgent started (Lab 4).
+
+--- LAB 4 MESSAGE LOG START ---
+[2026-02-21 22:26:01 UTC] COORDINATOR -> SENT REQUEST to groupworklab4@xmpp.jp | body='TASK: Respond to FLOOD at Zone-A; severity=HIGH'
+[2026-02-21 22:26:58 UTC] RESCUE stopped.
+[2026-02-21 22:27:02 UTC] COORDINATOR stopped.
+[2026-02-21 22:29:20 UTC] RescueAgent started (Lab 4).
+
+--- LAB 4 MESSAGE LOG START ---
+[2026-02-21 22:29:24 UTC] COORDINATOR -> SENT REQUEST to groupworklab4@xmpp.jp | body='TASK: Respond to FLOOD at Zone-A; severity=HIGH'
+[2026-02-21 22:30:21 UTC] RESCUE stopped.
+[2026-02-21 22:30:24 UTC] COORDINATOR stopped.
+
+--- LAB 4 MESSAGE LOG START ---
+[2026-02-21 22:33:32 UTC] COORDINATOR -> SENT REQUEST to groupworklab4.2@xmpp.jp | body='TASK: Respond to FLOOD at Zone-A; severity=HIGH'
+[2026-02-21 22:33:34 UTC] RescueAgent started (Lab 4).
+[2026-02-21 22:34:34 UTC] COORDINATOR stopped.
+[2026-02-21 22:34:35 UTC] RESCUE stopped.
+[2026-02-21 22:40:01 UTC] RescueAgent started (Lab 4).
+
+--- LAB 4 MESSAGE LOG START ---
+[2026-02-21 22:40:08 UTC] COORDINATOR -> SENT REQUEST to groupworklab4.2@xmpp.jp | body='TASK: Respond to FLOOD at Zone-A; severity=HIGH'
+[2026-02-21 22:40:09 UTC] RESCUE <- RECEIVED REQUEST from groupworklab4@xmpp.jp/4189722094737920431600054019 | body='TASK: Respond to FLOOD at Zone-A; severity=HIGH'
+[2026-02-21 22:40:09 UTC] RESCUE -> ACTION TRIGGERED: DISPATCH FLOOD RESPONSE UNIT
+[2026-02-21 22:40:09 UTC] RESCUE -> SENT INFORM to groupworklab4@xmpp.jp/4189722094737920431600054019 | body='STATUS: DISPATCH FLOOD RESPONSE UNIT completed; outcome=SUCCESS'
+[2026-02-21 22:40:09 UTC] COORDINATOR <- RECEIVED INFORM from groupworklab4.2@xmpp.jp/61294811679801040833055396130 | body='STATUS: DISPATCH FLOOD RESPONSE UNIT completed; outcome=SUCCESS'
+[2026-02-21 22:41:01 UTC] RESCUE stopped.
+[2026-02-21 22:41:09 UTC] COORDINATOR stopped.
