@@ -17,10 +17,10 @@ def severity_from_score(score: float) -> str:
     return "CRITICAL"
 
 
-class Lab3SensorAgent(Agent):
-    class SendReport(PeriodicBehaviour):
+class SensorAgent(Agent):
+    class MonitorAndSend(PeriodicBehaviour):
         async def run(self):
-            # Simulate environment readings
+            # Simulated environment readings
             water = round(max(0, random.uniform(10, 180)), 1)
             temp = round(random.uniform(24, 50), 1)
             smoke = round(max(0, random.uniform(0, 250)), 1)
@@ -36,32 +36,35 @@ class Lab3SensorAgent(Agent):
             score = round(hazard_scores[hazard], 1)
             severity = severity_from_score(score)
 
-            timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
-            report = f"{timestamp}|{hazard}|{severity}|{score}|water={water},temp={temp},smoke={smoke},tremor={tremor}"
+            ts = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+            details = f"water={water},temp={temp},smoke={smoke},tremor={tremor}"
+            report = f"{ts}|{hazard}|{severity}|{score}|{details}"
 
-            msg = Message(to=self.agent.coordinator_jid)
+            msg = Message(to=self.agent.receiver_jid)
             msg.set_metadata("performative", "inform")
             msg.set_metadata("ontology", "sensor-report")
             msg.body = report
 
             await self.send(msg)
-            print(f"[SENSOR] Sent report -> {report}")
+            print(f"[SENSOR] sent -> {report}")
 
     async def setup(self):
-        # Set who receives reports
-        self.coordinator_jid = "mighty808@xmpp.jp"
-        self.add_behaviour(self.SendReport(period=5))
+        print("SensorAgent started (Lab 3).")
+        self.receiver_jid = "YOUR_RESCUE_AGENT@xmpp.jp"
+        self.add_behaviour(self.MonitorAndSend(period=5))
 
 
 async def main():
-    sensor_jid = "mighty808@xmpp.jp"
-    sensor_pass = "Paakwesi888"
+    sensor_jid = "paakwesi8@xmpp.jp"
+    sensor_pass = "Paakwesi@888"
 
-    agent = Lab3SensorAgent(sensor_jid, sensor_pass, verify_security=False)
+    agent = SensorAgent(sensor_jid, sensor_pass, verify_security=False)
     await agent.start()
-    await asyncio.sleep(60)
+
+    await asyncio.sleep(90)
+
     await agent.stop()
-    print("Sensor stopped.")
+    print("SensorAgent stopped.")
 
 
 if __name__ == "__main__":
