@@ -4,5 +4,74 @@
 --- LAB 3 EXECUTION TRACE START ---
 
 --- LAB 3 EXECUTION TRACE START ---
-
---- LAB 3 EXECUTION TRACE START ---
+2026-02-21 20:12:54 UTC | REPORT | FIRE | CRITICAL | score=216.1 | water=137.5,temp=38.1,smoke=209.9,tremor=3.99
+2026-02-21 20:12:54 UTC | ACTION | FIRE | CRITICAL | score=216.1 | Dispatch fire team; isolate area; cut power supply
+2026-02-21 20:12:57 UTC | DONE | FIRE | CRITICAL | score=216.1 | water=137.5,temp=38.1,smoke=209.9,tremor=3.99
+2026-02-21 20:12:59 UTC | REPORT | FIRE | CRITICAL | score=205.3 | water=111.0,temp=44.3,smoke=186.7,tremor=6.07
+2026-02-21 20:12:59 UTC | ACTION | FIRE | CRITICAL | score=205.3 | Dispatch fire team; isolate area; cut power supply
+2026-02-21 20:13:02 UTC | DONE | FIRE | CRITICAL | score=205.3 | water=111.0,temp=44.3,smoke=186.7,tremor=6.07
+2026-02-21 20:13:04 UTC | REPORT | FIRE | CRITICAL | score=181.2 | water=110.5,temp=27.3,smoke=181.2,tremor=0.75
+2026-02-21 20:13:04 UTC | ACTION | FIRE | CRITICAL | score=181.2 | Dispatch fire team; isolate area; cut power supply
+2026-02-21 20:13:07 UTC | DONE | FIRE | CRITICAL | score=181.2 | water=110.5,temp=27.3,smoke=181.2,tremor=0.75
+2026-02-21 20:13:09 UTC | REPORT | FLOOD | MODERATE | score=76.0 | water=76.0,temp=25.4,smoke=3.5,tremor=1.14
+2026-02-21 20:13:09 UTC | ACTION | FLOOD | MODERATE | score=76.0 | Deploy sandbags; evacuate low-lying zones
+2026-02-21 20:13:12 UTC | DONE | FLOOD | MODERATE | score=76.0 | water=76.0,temp=25.4,smoke=3.5,tremor=1.14
+2026-02-21 20:13:14 UTC | REPORT | EARTHQUAKE | MODERATE | score=69.3 | water=54.6,temp=36.5,smoke=14.0,tremor=6.93
+2026-02-21 20:13:14 UTC | ACTION | EARTHQUAKE | MODERATE | score=69.3 | Send rescue team; initiate medical triage
+2026-02-21 20:13:17 UTC | DONE | EARTHQUAKE | MODERATE | score=69.3 | water=54.6,temp=36.5,smoke=14.0,tremor=6.93
+2026-02-21 20:13:19 UTC | REPORT | FLOOD | CRITICAL | score=141.9 | water=141.9,temp=48.8,smoke=11.7,tremor=6.55
+2026-02-21 20:13:19 UTC | ACTION | FLOOD | CRITICAL | score=141.9 | Deploy sandbags; evacuate low-lying zones
+2026-02-21 20:13:22 UTC | DONE | FLOOD | CRITICAL | score=141.9 | water=141.9,temp=48.8,smoke=11.7,tremor=6.55
+2026-02-21 20:13:24 UTC | REPORT | FIRE | CRITICAL | score=219.5 | water=111.0,temp=35.0,smoke=219.5,tremor=2.53
+2026-02-21 20:13:24 UTC | ACTION | FIRE | CRITICAL | score=219.5 | Dispatch fire team; isolate area; cut power supply
+2026-02-21 20:13:27 UTC | DONE | FIRE | CRITICAL | score=219.5 | water=111.0,temp=35.0,smoke=219.5,tremor=2.53
+2026-02-21 20:13:29 UTC | REPORT | FIRE | CRITICAL | score=194.0 | water=104.3,temp=46.2,smoke=171.6,tremor=9.65
+2026-02-21 20:13:29 UTC | ACTION | FIRE | CRITICAL | score=194.0 | Dispatch fire team; isolate area; cut power supply
+2026-02-21 20:13:32 UTC | DONE | FIRE | CRITICAL | score=194.0 | water=104.3,temp=46.2,smoke=171.6,tremor=9.65
+2026-02-21 20:13:34 UTC | REPORT | FIRE | CRITICAL | score=159.9 | water=12.2,temp=41.4,smoke=147.1,tremor=3.72
+2026-02-21 20:13:34 UTC | ACTION | FIRE | CRITICAL | score=159.9 | Dispatch fire team; isolate area; cut power supply
+2026-02-21 20:13:37 UTC | DONE | FIRE | CRITICAL | score=159.9 | water=12.2,temp=41.4,smoke=147.1,tremor=3.72
+2026-02-21 20:13:39 UTC | REPORT | FIRE | CRITICAL | score=249.6 | water=115.4,temp=33.9,smoke=249.6,tremor=9.01
+2026-02-21 20:13:39 UTC | ACTION | FIRE | CRITICAL | score=249.6 | Dispatch fire team; isolate area; cut power supply
+2026-02-21 20:13:42 UTC | DONE | FIRE | CRITICAL | score=249.6 | water=115.4,temp=33.9,smoke=249.6,tremor=9.01
+2026-02-21 20:13:44 UTC | REPORT | FIRE | CRITICAL | score=160.7 | water=124.4,temp=47.1,smoke=136.5,tremor=4.28
+2026-02-21 20:13:44 UTC | ACTION | FIRE | CRITICAL | score=160.7 | Dispatch fire team; isolate area; cut power supply
+2026-02-21 20:13:47 UTC | DONE | FIRE | CRITICAL | score=160.7 | water=124.4,temp=47.1,smoke=136.5,tremor=4.28
+2026-02-21 20:13:49 UTC | REPORT | FLOOD | CRITICAL | score=166.8 | water=166.8,temp=27.9,smoke=90.7,tremor=5.91
+2026-02-21 20:13:49 UTC | ACTION | FLOOD | CRITICAL | score=166.8 | Deploy sandbags; evacuate low-lying zones
+2026-02-21 20:13:52 UTC | DONE | FLOOD | CRITICAL | score=166.8 | water=166.8,temp=27.9,smoke=90.7,tremor=5.91
+2026-02-21 20:13:54 UTC | REPORT | FLOOD | CRITICAL | score=145.9 | water=145.9,temp=30.9,smoke=138.1,tremor=7.33
+2026-02-21 20:13:54 UTC | ACTION | FLOOD | CRITICAL | score=145.9 | Deploy sandbags; evacuate low-lying zones
+2026-02-21 20:13:57 UTC | DONE | FLOOD | CRITICAL | score=145.9 | water=145.9,temp=30.9,smoke=138.1,tremor=7.33
+2026-02-21 20:13:59 UTC | REPORT | FIRE | CRITICAL | score=216.2 | water=128.5,temp=29.1,smoke=216.2,tremor=3.73
+2026-02-21 20:13:59 UTC | ACTION | FIRE | CRITICAL | score=216.2 | Dispatch fire team; isolate area; cut power supply
+2026-02-21 20:14:02 UTC | DONE | FIRE | CRITICAL | score=216.2 | water=128.5,temp=29.1,smoke=216.2,tremor=3.73
+2026-02-21 20:14:04 UTC | REPORT | FIRE | HIGH | score=125.8 | water=83.2,temp=34.0,smoke=125.8,tremor=5.19
+2026-02-21 20:14:04 UTC | ACTION | FIRE | HIGH | score=125.8 | Dispatch fire team; isolate area; cut power supply
+2026-02-21 20:14:07 UTC | DONE | FIRE | HIGH | score=125.8 | water=83.2,temp=34.0,smoke=125.8,tremor=5.19
+2026-02-21 20:14:09 UTC | REPORT | FLOOD | HIGH | score=134.1 | water=134.1,temp=35.0,smoke=49.5,tremor=6.93
+2026-02-21 20:14:09 UTC | ACTION | FLOOD | HIGH | score=134.1 | Deploy sandbags; evacuate low-lying zones
+2026-02-21 20:14:12 UTC | DONE | FLOOD | HIGH | score=134.1 | water=134.1,temp=35.0,smoke=49.5,tremor=6.93
+2026-02-21 20:14:14 UTC | REPORT | FLOOD | CRITICAL | score=160.5 | water=160.5,temp=31.5,smoke=74.3,tremor=3.68
+2026-02-21 20:14:14 UTC | ACTION | FLOOD | CRITICAL | score=160.5 | Deploy sandbags; evacuate low-lying zones
+2026-02-21 20:14:17 UTC | DONE | FLOOD | CRITICAL | score=160.5 | water=160.5,temp=31.5,smoke=74.3,tremor=3.68
+2026-02-21 20:14:19 UTC | REPORT | FLOOD | CRITICAL | score=167.9 | water=167.9,temp=25.2,smoke=82.7,tremor=1.0
+2026-02-21 20:14:19 UTC | ACTION | FLOOD | CRITICAL | score=167.9 | Deploy sandbags; evacuate low-lying zones
+2026-02-21 20:14:22 UTC | DONE | FLOOD | CRITICAL | score=167.9 | water=167.9,temp=25.2,smoke=82.7,tremor=1.0
+2026-02-21 20:14:24 UTC | REPORT | FIRE | CRITICAL | score=201.1 | water=27.8,temp=33.8,smoke=201.1,tremor=8.7
+2026-02-21 20:14:24 UTC | ACTION | FIRE | CRITICAL | score=201.1 | Dispatch fire team; isolate area; cut power supply
+2026-02-21 20:14:27 UTC | DONE | FIRE | CRITICAL | score=201.1 | water=27.8,temp=33.8,smoke=201.1,tremor=8.7
+2026-02-21 20:14:29 UTC | REPORT | FIRE | CRITICAL | score=208.5 | water=62.4,temp=34.0,smoke=208.5,tremor=6.52
+2026-02-21 20:14:29 UTC | ACTION | FIRE | CRITICAL | score=208.5 | Dispatch fire team; isolate area; cut power supply
+2026-02-21 20:14:32 UTC | DONE | FIRE | CRITICAL | score=208.5 | water=62.4,temp=34.0,smoke=208.5,tremor=6.52
+2026-02-21 20:14:34 UTC | REPORT | FIRE | CRITICAL | score=165.3 | water=139.8,temp=25.0,smoke=165.3,tremor=4.27
+2026-02-21 20:14:34 UTC | ACTION | FIRE | CRITICAL | score=165.3 | Dispatch fire team; isolate area; cut power supply
+2026-02-21 20:14:37 UTC | DONE | FIRE | CRITICAL | score=165.3 | water=139.8,temp=25.0,smoke=165.3,tremor=4.27
+2026-02-21 20:14:39 UTC | REPORT | FLOOD | CRITICAL | score=159.9 | water=159.9,temp=44.3,smoke=64.3,tremor=2.47
+2026-02-21 20:14:39 UTC | ACTION | FLOOD | CRITICAL | score=159.9 | Deploy sandbags; evacuate low-lying zones
+2026-02-21 20:14:42 UTC | DONE | FLOOD | CRITICAL | score=159.9 | water=159.9,temp=44.3,smoke=64.3,tremor=2.47
+2026-02-21 20:14:44 UTC | REPORT | FIRE | CRITICAL | score=158.1 | water=40.5,temp=39.7,smoke=148.7,tremor=1.86
+2026-02-21 20:14:44 UTC | ACTION | FIRE | CRITICAL | score=158.1 | Dispatch fire team; isolate area; cut power supply
+2026-02-21 20:14:47 UTC | DONE | FIRE | CRITICAL | score=158.1 | water=40.5,temp=39.7,smoke=148.7,tremor=1.86
+2026-02-21 20:14:49 UTC | REPORT | FIRE | HIGH | score=133.7 | water=104.4,temp=43.8,smoke=116.1,tremor=8.98
+2026-02-21 20:14:49 UTC | ACTION | FIRE | HIGH | score=133.7 | Dispatch fire team; isolate area; cut power supply

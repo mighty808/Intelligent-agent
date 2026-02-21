@@ -20,13 +20,11 @@ def severity_from_score(score: float) -> str:
 class SensorAgent(Agent):
     class MonitorAndSend(PeriodicBehaviour):
         async def run(self):
-            # Simulated environment readings
             water = round(max(0, random.uniform(10, 180)), 1)
             temp = round(random.uniform(24, 50), 1)
             smoke = round(max(0, random.uniform(0, 250)), 1)
             tremor = round(random.uniform(0, 10), 2)
 
-            # Simple hazard scoring
             flood_score = water
             fire_score = smoke + max(0, (temp - 35) * 2)
             quake_score = tremor * 10
@@ -50,18 +48,19 @@ class SensorAgent(Agent):
 
     async def setup(self):
         print("SensorAgent started (Lab 3).")
-        self.receiver_jid = "YOUR_RESCUE_AGENT@xmpp.jp"
+        # Send to the FSM agent JID
+        self.receiver_jid = "paakwesi8@xmpp.jp"
         self.add_behaviour(self.MonitorAndSend(period=5))
 
 
 async def main():
-    sensor_jid = "paakwesi8@xmpp.jp"
-    sensor_pass = "Paakwesi@888"
+    sensor_jid = "mighty899@xmpp.jp"
+    sensor_pass = "123456"
 
     agent = SensorAgent(sensor_jid, sensor_pass, verify_security=False)
     await agent.start()
 
-    await asyncio.sleep(90)
+    await asyncio.sleep(120)
 
     await agent.stop()
     print("SensorAgent stopped.")

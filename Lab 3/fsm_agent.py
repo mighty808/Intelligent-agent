@@ -14,7 +14,12 @@ class Monitoring(State):
         print("[FSM] MONITORING: waiting for sensor report...")
         msg = await self.receive(timeout=10)
 
-        if not msg or msg.get_metadata("ontology") != "sensor-report":
+        if not msg:
+            self.set_next_state("MONITORING")
+            return
+
+        if msg.get_metadata("ontology") != "sensor-report":
+            print("[FSM] MONITORING: received non-sensor message, ignored.")
             self.set_next_state("MONITORING")
             return
 
@@ -26,7 +31,6 @@ class Assessing(State):
     async def run(self):
         print("[FSM] ASSESSING: parsing and classifying report...")
 
-        # report format: timestamp|hazard|severity|score|details
         parts = (self.agent.last_report or "").split("|")
         if len(parts) < 5:
             print("[FSM] ASSESSING: bad report format -> back to MONITORING")
@@ -44,6 +48,10 @@ class Assessing(State):
         }
 
         print(f"[FSM] ASSESSING: hazard={hazard} severity={severity} score={score}")
+
+        # ✅ Log every received report (so your trace file always has content)
+        with open("lab3_execution_trace.txt", "a", encoding="utf-8") as f:
+            f.write(f"{ts} | REPORT | {hazard} | {severity} | score={score} | {details}\n")
 
         if is_emergency(severity):
             self.set_next_state("DISPATCHING")
@@ -71,7 +79,7 @@ class Dispatching(State):
         with open("lab3_execution_trace.txt", "a", encoding="utf-8") as f:
             f.write(line)
 
-        await asyncio.sleep(3)  # simulate response time
+        await asyncio.sleep(3)
         self.set_next_state("CONFIRMING")
 
 
@@ -99,7 +107,6 @@ class RescueFSMAgent(Agent):
         self.last_report = None
         self.current_event = None
 
-        # trace file header
         with open("lab3_execution_trace.txt", "a", encoding="utf-8") as f:
             f.write("\n--- LAB 3 EXECUTION TRACE START ---\n")
 
@@ -120,15 +127,13 @@ class RescueFSMAgent(Agent):
 
 
 async def main():
-    # Use your working remote XMPP credentials:
     rescue_jid = "paakwesi8@xmpp.jp"
-    rescue_pass = "Paakwesi@888"
+    rescue_pass = "Paakwesi@888"  # keep your real password here only in your file
 
     agent = RescueFSMAgent(rescue_jid, rescue_pass, verify_security=False)
     await agent.start()
 
-    # Keep running long enough to receive sensor reports
-    await asyncio.sleep(90)
+    await asyncio.sleep(120)
 
     await agent.stop()
     print("RescueFSMAgent stopped. Trace saved to lab3_execution_trace.txt")
